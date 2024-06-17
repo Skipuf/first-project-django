@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/font.css' %}" rel="stylesheet" />
+        <title>{% block title %} {% endblock title %}</title>
+    </head>
+    <body class="bg-dark">
+        <nav class="p-4 border-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="/" class="btn text-white fs-4">Skipuf</a>
+                <div class="d-flex gap-3 ">
+                    <a href="/one" class="btn btn-outline-info text-white text-sm">Страница 1</a>
+                    <a href="/two" class="btn btn-outline-info text-white text-sm">Страница 2</a>
+                    <a href="/three" class="btn btn-outline-info text-white text-sm font-pixel">Страница 3</a>
+                    <a href="https://github.com/Skipuf/first-project-django" class="btn btn-outline-light text-sm">GitHub</a>
+                </div>
+            </div>
+        </nav>
+        {% block content %} {% endblock content %}
+    </body>
+</html>
